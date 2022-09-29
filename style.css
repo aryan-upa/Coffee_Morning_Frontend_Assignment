@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+body::-webkit-scrollbar {
+    /* Hiding the scroll bar */
+    display: none;
+}
+
+/*NAVBAR START*/
+nav {
+    position: fixed;
+    display: flex;
+    right: 0;
+    left: 0;
+    background-color: black;
+    padding: 1rem 3rem;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+nav > .links {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > .links > a {
+    font-family: Poppins, serif;
+    padding: 0 1rem;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+nav > .links > a:hover {
+    animation: slide 0.2s ease-out;
+    text-decoration: underline khaki wavy;
+}
+
+@keyframes slide {
+    0% {
+        text-underline-offset: 100%;
+    }
+
+    50% {
+        text-underline-offset: 55%;
+    }
+
+    100% {
+        text-underline-offset: 10%;
+    }
+}
+
+nav > .buttons {
+    font-family: Poppins, serif;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 3rem;
+    scale: 1.3;
+}
+/*NAVBAR END*/
+
+/*HOME START*/
+.heads-up {
+    width: 100%;
+}
+
+.heads-up > img {
+    /*position: fixed;*/
+    z-index: -1;
+    width: 100%;
+}
+
+.heads-up > .text-in-home {
+    font-family: Poppins, serif;
+    position: absolute;
+    width: content-box;
+    z-index: 1;
+    background: none;
+    margin-top: 15rem;
+    margin-left: 7rem;
+}
+
+.heads-up > .text-in-home > h2 {
+    color: white;
+    font-size: 3.75rem;
+    margin-bottom: 2rem;
+}
+
+.heads-up > .text-in-home > p {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.heads-up > .text-in-home > button {
+    padding: 0.8rem 2rem;
+    background-color: khaki;
+    border: none;
+}
+
+.heads-up > .text-in-home > button > a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.188rem;
+}
+/*HOME END*/
+
+/*ABOUT US START*/
+.about-us {
+    font-family: Poppins, serif;
+    margin: 0 5rem;
+    text-align: center;
+}
+
+.about-us > h2 {
+    font-size: 2.4rem;
+    color: white;
+    margin: 2rem 0;
+}
+
+.about-us > .about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.about-us > .about > img {
+    scale: 0.95;
+}
+
+.about-us > .about > .about-text {
+    color: white;
+    font-family: Poppins, serif;
+    text-align: left;
+}
+
+.about-us > .about > .about-text > h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-us > .about > .about-text > p {
+    font-size: 19px;
+    margin-bottom: 2rem;
+}
+
+.about-us > .about > .about-text > button {
+    padding: 0.8rem 2rem;
+    background-color: khaki;
+}
+
+.about-us > .about > .about-text > button > a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.188rem;
+}
+/*ABOUT US END*/
+
+/*MENU START*/
+
+.our-menu {
+    font-family: Poppins, serif;
+    margin: 0 5rem;
+    text-align: center;
+}
+
+.our-menu > h2 {
+    color: white;
+    font-size: 2.4rem;
+    margin: 2rem 0;
+}
+
+.our-menu > .menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+
+}
+
+.our-menu > .menu > .card {
+    border: 1px solid gray;
+    color: white;
+    transition: 0.2s linear;
+}
+
+.our-menu > .menu > .card > img {
+    margin: 3rem auto 1rem;
+}
+
+.our-menu > .menu > .card > h3 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.tasty {
+    color: white;
+}
+
+.card > h4 {
+    font-size: 1.5rem;
+}
+
+.price {
+    color: white;
+}
+
+.our-menu > .menu > .card > button {
+    margin: 1rem auto 3rem;
+    padding: 0.8rem 2rem;
+    background-color: khaki;
+}
+
+.add-to-cart {
+    text-decoration: none;
+    color: white;
+    font-size: 1.188rem;
+}
+
+.card:hover {
+    background-color: beige;
+}
+
+.card:hover .add-to-cart {
+    color: black;
+}
+
+.card:hover .price {
+    color: black;
+}
+
+.card:hover .tasty {
+    color: black;
+}
+
+/*MENU END*/
+
+/*PRODUCTS START*/
+
+.products {
+    font-family: Poppins, serif;
+    margin: 0 10rem;
+    text-align: center;
+}
+
+.products > h2 {
+    font-size: 2.4rem;
+    color: white;
+    margin: 2rem 0;
+}
+
+.products > .product-each {
+    display: grid;
+    grid-template-columns: repeat(3, 0.8fr);
+    column-gap: 1rem;
+}
+
+.product {
+    border: 1px solid gray;
+}
+
+.product > .logos {
+    margin: 2rem auto 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    column-gap: 0.5rem;
+    width: 40%;
+}
+
+.product > .logos > a {
+    color: white;
+    width: 33%;
+    aspect-ratio: 1;
+    border: 1px solid gray;
+}
+
+.product > .logos > a > i {
+    margin: 1rem 0;
+    scale: 1.4;
+}
+
+.product > .logos > a:hover {
+    color: khaki;
+}
+.product > img {
+    margin: 2rem 0;
+}
+
+.product > h3 {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+}
+
+.product > .stars {
+    color: orange;
+    scale: 1.2;
+    margin-bottom: 1rem;
+}
+
+.product > h4 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/*PRODUCTS END*/
+/*CUSTOMER REVIEW START*/
+
+.cust-review {
+    font-family: Poppins, serif;
+    margin: 0 10rem;
+    text-align: center;
+}
+
+.cust-review > h2 {
+    font-size: 2.4rem;
+    color: white;
+    margin: 2rem 0;
+}
+
+.cust-review > .reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 0.8fr);
+    column-gap: 1rem;
+}
+
+.review-card {
+    padding: 2rem 0 2rem;
+    border: 2px solid gray;
+}
+
+.review-card > img:nth-of-type(1) {
+    margin-bottom: 2rem;
+}
+
+.review-card > p {
+    color: white;
+    margin: 0 1rem 2rem;
+}
+
+.review-card > img:nth-of-type(2) {
+    border: 2px solid gray;
+    border-radius: 50%;
+    width: 20%;
+}
+
+.review-card > h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.review-card > .stars {
+    color: orange;
+    scale: 1.2;
+    margin: 1rem;
+}
+
+/*CUSTOMER REVIEW END*/
+/*CONTACT-US START*/
+
+.contact-us {
+    font-family: Poppins, serif;
+    margin: 0 10rem;
+    text-align: center;
+}
+
+.contact-us > h2 {
+    font-size: 2.4rem;
+    color: white;
+    margin: 2rem 0;
+}
+
+.contact-us > .form-holder {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(22, 19, 18);
+}
+
+.contact-us > .form-holder > iframe {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.contact-us > .form-holder > .internal-form-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us > .form-holder > .internal-form-holder > h3 {
+    margin: 4rem 0 1.5rem;
+    font-size: 40px;
+    color: white;
+}
+
+.contact-us > .form-holder > .internal-form-holder > form > label {
+    margin: 0.5rem 1rem;
+    border: 1px solid white;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    column-gap: 0.4rem;
+}
+
+.contact-us > .form-holder > .internal-form-holder > form > label > i {
+    color: white;
+    scale: 1.4;
+    margin-left: 1rem;
+}
+
+.contact-us > .form-holder > .internal-form-holder > form > label > input {
+    margin: 0 1rem 0 1rem;
+    width: 100%;
+    background: none;
+    border: none;
+    height: 2rem;
+    font-size: 20px;
+    color: khaki;
+}
+
+.contact-us > .form-holder > .internal-form-holder > form > label > input:focus {
+    outline: none;
+}
+
+.contact-us > .form-holder > .internal-form-holder > form > button {
+    margin: 1rem auto 2rem;
+    padding: 0.8rem 2rem;
+    background-color: khaki;
+    color: white;
+    font-size: 1.188rem;
+}
+
+/*CONTACT-US END*/
+/*BLOG POST START*/
+
+.blog-post {
+    font-family: Poppins, serif;
+    margin: 0 10rem;
+    text-align: center;
+}
+
+.blog-post > h2 {
+    font-size: 2.4rem;
+    color: white;
+    margin: 2rem 0;
+}
+
+.blog-post > .blog-content {
+    display: grid;
+    grid-template-columns: repeat(3, 0.8fr);
+    column-gap: 1rem;
+}
+
+.blog-post > .blog-content > .blog {
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.blog-post > .blog-content > .blog > .blog-img {
+    overflow: hidden;
+}
+
+.blog-post > .blog-content > .blog > .blog-img > img {
+    width: 100%;
+    transition: 0.3s ease-out;
+}
+
+.blog-post > .blog-content > .blog > .blog-text {
+    text-align: left;
+}
+
+.blog-post > .blog-content > .blog > .blog-text > h3 {
+    margin: 1rem auto 1rem 1rem;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+}
+
+.blog-post > .blog-content > .blog > .blog-text > h4 {
+    margin: 0 auto 1rem 1rem;
+    color: khaki;
+    font-size: 18px;
+    text-align: left;
+}
+
+.blog-post > .blog-content > .blog > .blog-text > p {
+    margin: 0 auto 1rem 1rem;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+}
+
+.blog-post > .blog-content > .blog > .blog-text > button {
+    margin: 0 auto 1rem 1rem;
+    padding: 0.8rem 2rem;
+    background-color: khaki;
+    font-size: 1.188rem;
+}
+
+.blog-post > .blog-content > .blog > .blog-text > button > a {
+    text-decoration: none;
+    color: white;
+}
+
+.blog-post > .blog-content > .blog > .blog-img > img:hover {
+    scale: 1.2;
+}
+
+/*BLOG POST END*/
+/*FOOTER START*/
+
+footer {
+    margin-top: 1rem;
+    background-color: rgb(22, 19, 18);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+footer > .circle-icons {
+    display: flex;
+    margin-top: 1rem;
+    column-gap: 1rem;
+}
+
+footer > .circle-icons > .icon {
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+footer > .circle-icons > .icon:hover {
+    background: khaki;
+}
+
+footer > .circle-icons > .icon:hover a > i {
+    color: black;
+}
+
+footer > .circle-icons > .icon > a > i {
+    color: white;
+    scale: 1.8;
+    padding: 1rem;
+}
+
+footer > .buttons {
+    display: flex;
+    column-gap: 0.5rem;
+    font-size: 24px;
+    margin-bottom: 2rem;
+}
+
+footer > .buttons > a {
+    text-decoration: none;
+    color: white;
+    padding: 0 5px;
+    border: 1px solid white;
+}
+
+footer > .buttons > a:hover {
+    background-color: khaki;
+    color: black;
+}
+
+/*FOOTER END*/
